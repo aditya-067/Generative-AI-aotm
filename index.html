@@ -3,19 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Bebas+Neue&family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kablammo&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <style>
     *{
-        background-color: black;
-        color: white;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
     }
-    body{
-        text-align: center;
+    html,body{
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+
+
     }
+
+    #myVideo {
+  position: fixed;
+  right: 0;
+  
+  bottom: 0;
+  min-width: 80%;
+  min-height: 80%;
+  
+}
+
+    
+
+    .main{
+        height: 100vh;
+        width: 100%;
+        background-color: #d0d4d5;
+    }
+
+    .nav{
+        height: 110px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .nav-part-1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav img {
+        height: 80px;
+        width: auto;
+        margin-right: 60px;
+        cursor: pointer;
+
+    }
+
+    .nav-part-1 ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+
+     .nav-part-1 ul li{
+        margin-right: 40px;
+        font-size: 19px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+     }
+
+     .nav-part-2{
+      
+        font-size: 21px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        
+        margin-left: 720px;
+       
+     }
+     .fa-solid{
+        margin: 20px;
+     }
+
+     .content{
+        height: calc(100%-110px);
+        width: 100%;
+        position: relative;
+        display: flex;
+
+     }
+
+     .content-left{
+        height: 100%;
+        width: 40%;
+        padding: 80px 100px;
+        
+     }
+     .content-left h5{
+
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #555;
+        margin-bottom: 10px;
+
+     }
+
+     .content-left h1{
+        font-size: 55px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 25px;
+
+     }
+
+     .content-left p{
+        font-size: 20px;
+        color: #555;
+        width: 80%;
+        margin-bottom: 30px;
+
+     }
+
+     .btn{
+        background-color: #f65d49;
+        color: #fff;
+        font-size: 15px;
+        padding: 12px 40px;
+        font-weight: 600;
+        border: none;
+        border-radius:50px ;
+        border-top-left-radius: 0px;
+         border-bottom-right-radius: 0px;
+     }
+
+     .content-right{
+        height: 100%;
+        width: 60%;
+        padding: 110px 100px;
+        white-space: nowrap;
+        overflow-x: auto;
+     }
+
+     .content-right::-webkit-scrollbar {
+        display: none;
+     }
+
+     .product{
+        height: 370px;
+        width: 250px;
+        background-color: #1011;
+        position: relative;
+        box-shadow: 0  6px 10px rgba(17, 0, 17, 0.3);
+        display: inline-block;
+        margin-right:20px ;
+     }
+
+     .product img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        position: absolute;
+        bottom: 20px;
+     }
+
+     .product h4{
+        font-size: 18px;
+        text-transform: capitalize;
+        position: absolute;
+        bottom: 28%;
+     }
+
+     .catagory{
+        position: absolute;
+        bottom: 20%;
+        font-weight: 500;
+         text-transform: capitalize;
+
+     }
+
+     .color{
+         position: absolute;
+        bottom: 15%;
+        font-weight: 500;
+        text-transform: capitalize;
+     }
+
+     .price{
+        font-size: 18px;
+
+         position: absolute;
+        bottom: 5%;
+        font-weight: 600;
+         text-transform: capitalize;
+     }
+
+
+
+
+
+
+
 </style>
 <body>
-    <h1>Artist of the month </h1>
+
+    <video autoplay muted loop id="myVideo">
+  <source src="video/5091624-hd_1920_1080_24fps.mp4" type="video/mp4">
+</video>
+
+    <div class="main">
+        <div class="nav">
+            <div class="nav-part-1">
+                <img src="image/" alt="logo">
+                <ul>
+                    <li>Home</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Collection</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="nav-part-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <h5>Let's Explore future Together</h5>
+                <h1>generative ai</h1>
+                <p>Generative AI is a type of artificial intelligence that creates new content, such as text, images, audio, video, and code, based on the data it was trained on. It works by learning patterns from vast datasets and then using that knowledge to generate novel outputs in response to user prompts, moving beyond simple data analysis or classification. Key applications include writing assistance, code generation, image creation, and automating complex administrative tasks.  </p>
+                <button class="btn">Explore</button>
+            </div>
+            <div class="content-right">
+                <div class="product">
+                    <img src="images/" alt="product">
+                    <h4>History</h4>
+                    <!-- <p class="catagory">Men's shoes</p>
+                    <p class="color">color: white</p>
+                    <p class="price">₹ 14 995</p> -->
+                </div>
+
+
+                 <div class="product">
+                    <img src="images/" alt="product">
+                    <h4>Evolution</h4>
+                    <!-- <p class="catagory">Men's shoes</p>
+                    <p class="color">color: white</p>
+                    <p class="price">₹ 14 995</p> -->
+                </div>
+
+
+           
+
+
+
+
+
+
+
+            
+
+
+
+
+            </div>
+        </div>
+
+    </div>
     
 </body>
 </html>
