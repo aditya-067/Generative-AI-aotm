@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Bebas+Neue&family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kablammo&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        .active{
+            color:rgba(182, 20, 150, 0.69) ;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        body , html {
+            overflow-x: hidden;
+        }
+
+        .navbar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 20px;
+            color: whitesmoke;
+        }
+
+        .nav-links{
+            display: flex;
+            align-items: center;
+        }
+        .nav-links li{
+            margin: 0 30px;
+        }
+
+
+        header{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(image/360_F_612675009_iq8g7cB1GbQ4ueOuKQEbmmbyBSwBNeAW.jpg);
+            background-position: bottom;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .header-content{
+            margin-bottom: 150px;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .header-content h2{
+            font-size: 4vmin;
+        }
+        .line {
+            width: 150px;
+            height: 4px;
+            background: rgba(182, 20, 150, 0.69);
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        .header-content h1{
+            font-size: 7vmin;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .ctn{
+            padding: 8px 15px;
+            background: rgba(182, 20, 150, 0.69);
+            border-radius: 30px;
+            color: whitesmoke;
+
+        }
+        .menu-btn{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 40px; 
+            cursor: pointer;
+            display: none;
+        }
+
+        section{
+            width: 80%;
+            margin: 80px auto;
+        }
+        .title {
+            text-align: center;
+            font-size: 4vmin;
+            color: rgba(105, 9, 86, 0.805);
+        }
+
+        .row{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            /* background: cyan; */
+        }
+
+        .row .col{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row .col img{
+            width: 80%;
+        }
+
+        .events .row{
+            margin-top: 50px;
+
+        }
+        h4{
+            font-size: 3vmin;
+            color: rgba(105, 9, 86, 0.805);
+            margin: 20px auto;
+        }
+        p{
+            color: #24243a;
+            padding: 0px 40px;
+        }
+        .events .ctn {
+            margin-top: 30px;
+        }
+
+        .explore{
+            width: 100%;
+            height: 100vh;
+            background-image: url(image/ca4d2391455ade48053c0b6861842574.gif);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .explore-content{
+            width: 60%;
+            padding: 50px;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .explore-content h1{
+
+            font-size: 7vmin;
+            
+        }
+        .explore-content .line{
+            margin-bottom: 50px;
+        }
+
+        .explore-content p{
+            color: rgb(226, 221, 221);
+        }
+
+        .explore-content .ctn{
+            margin-top: 40px;
+        }
+        .content-col{
+            width: 40%;
+        }
+        .image-col{
+            width: 60%;
+        }
+        .tours .image-gallery{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+        }
+
+        .image-gallery img{
+            max-width: 300px;
+            margin: 10px;
+        }
+        .content-col h1{
+            font-size: 7vmin;
+            color: #2f2f79;
+        }
+        .content-col .line{
+            margin-left: -1px;
+        }
+        .content-col p{
+            padding: 0;
+            margin: 30px auto;
+        }
+
+        .content-col .ctn{
+            margin-left: 15px;
+        }
+
+        .footer{
+            width: 100%;
+            min-height: 100px;
+            padding: 20px 80px;
+            margin: 0;
+            background: #484872;
+            text-align: center;
+        }
+
+        .footer p{
+            color: whitesmoke;
+            margin: 20px auto;
+            padding: 20px auto;
+        }
+
+        @media only screen and (max-width:850px){
+            .menu-btn{
+                display: block;
+            }
+            .navbar{
+                padding: 0;
+            }
+            .logo{
+                position: absolute;
+                top: 30px;
+                left: 30px;
+
+            }
+            .nav-links{
+                flex-direction: column;
+                width: 100vw;
+                height: 100vh;
+                justify-content: center;
+                background: #24243a;
+                margin-top: -900px;
+                transition:all 0.5s ease ;
+            }
+            .mobile-menu {
+                margin-top: 0px;
+                border-bottom-right-radius: 30%;
+            }
+            .nav-links li {
+                margin: 30px auto;
+            }
+            .row{
+                flex-direction: column;
+            }
+            .row .col{
+                margin: 20px auto;
+
+            }
+
+            .col img{
+                max-width: 90%;
+            }
+            .explore-content{
+                width: 100%;
+            }
+            .tours .col{
+                width: 100%;
+            }
+            .image-gallery{
+                justify-content: center;
+                align-items: center;
+            }
+            .image-gallery img{
+                width: 90%;
+            }
+            .footer{
+                padding: 10px;
+            }
+        }
+
+        img {
+            transition: transform .3s ease;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        .ctn:hover{
+            background: whitesmoke;
+            color: rgba(105, 9, 86, 0.805);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.336);
+        }
+        li a:hover{
+            color: rgba(182, 20, 150, 0.69);
+            cursor: pointer;
+            transform: scale(1.2);
+
+        }
+                 a{
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Introduction Of AI</h1>
+        <ul class="nav-links">
+            <li ><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Introduction</a></li>
+            <li ><a href="evolution.html">Evolution</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="#">About</a></li>
+            <li class="ctn"><a  href="#"></a>Contact</li>
+
+
+        </ul>
+        <img src="images/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>Explore The Gen-AI World</h2>
+            <div class="line"></div>
+            <h1>A WONDERFUL GIFT</h1>
+            <a href="#" class="ctn">Learn </a>
+        </div>
+    </header>
+    <section class="events">
+        <div class="title">
+            <h2>Artificial Intelligence & Generative AI</h2>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/1683451512651.jpg" alt="">
+                <h4>Artificial Intelligence</h4>
+                <p>Artificial Intelligence (AI) is a branch of computer science that allows machines to mimic human intelligence.
+AI systems can learn, solve problems, understand language, and make decisions.
+Key features of AI:
+</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="images/1698438419640.png" alt="">
+                <h4>Generative AI</h4>
+                <p>Generative AI (GenAI) refers to AI models that can create new content.
+These models can generate: Images,Videos, Audio, Code,3dModel etc.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="explore-content">
+            <h1>Explore The World</h1>
+            <div class="line"></div>
+        <p style="font-size: 20px;">The World of Artificial Intelligence & Generative AI
+Subtitle: Learn how machines think, create, and help us shape the future.
+Short Intro Paragraph:
+Artificial Intelligence (AI) is transforming the world around us. From voice assistants to creative tools that can generate images, music, or entire videos, AI has become a major part of our daily lives. This website explores what AI is, how it evolved, and how Generative AI is changing creativity and industries. Generative AI teaches computers not only to understand things, but also to create new things.
+</p>
+        <a href="#" class="ctn">Learn More</a>
+    
+        </div>
+        </section>
+        <section class="tours">
+            <div class="row">
+                <div class=" content-col">
+                    <h1>Law and regulation</h1>
+                    <div class="line"></div>
+                    <p>In the United States, a group of companies including OpenAI, Alphabet, and Meta signed a voluntary agreement with the Biden administration in July 2023 to watermark AI-generated content. In October 2023, Executive Order 14110 applied the Defense Production Act to require all US companies to report information to the federal government when training certain high-impact AI models.In the European Union, the proposed Artificial Intelligence Act includes requirements to disclose copyrighted material used to train generative AI systems, and to label any AI-generated output as such.</p>
+                    <a href="#" class="ctn">Learn More</a>
+                </div>
+                <div class=" image-col">
+                    <div class="image-gallery">
+                        <img src="images/0x0.webp" alt="">
+                        <img src="images/0x0.webp" alt="">
+                        <img src="images/0x0.webp" alt="">
+                        <img src="images/0x0.webp" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <p>Created by Aditya</p>
+            
+
+
+        </section>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+        
+        menuBtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+
+        })
+    </script>
+</body>
+</html>
