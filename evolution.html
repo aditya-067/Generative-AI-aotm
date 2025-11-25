@@ -309,65 +309,108 @@
             text-decoration: none;
         }
 
-      
 @media (max-width: 600px) {
 
-  
+    body, html {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+
+    
+    .navbar {
+        padding: 10px !important;
+        width: 100%;
+    }
+
+    .nav-links {
+        width: 100vw !important;
+        height: 100vh !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        background: #24243a !important;
+        margin-top: -900px;
+    }
+
+    .nav-links li {
+        margin: 20px auto !important;
+        text-align: center !important;
+    }
+
+   
     header {
+        height: 70vh !important;
         background-size: cover !important;
         background-position: center !important;
     }
 
-    
+    .header-content {
+        margin-bottom: 80px !important;
+        padding: 0 20px !important;
+    }
+
     .header-content h1 {
         font-size: 8vmin !important;
     }
+
     .header-content h2 {
         font-size: 5vmin !important;
     }
 
-   
+  
     section {
         width: 90% !important;
         margin: 40px auto !important;
     }
 
- 
-    .navbar {
-        padding: 10px !important;
-    }
-
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-   
     .row {
         flex-direction: column !important;
         text-align: center !important;
-        gap: 20px;
+        gap: 25px !important;
     }
 
-   
-    .ctn {
-        display: inline-block;
-        margin: 20px auto !important;
+    .row .col img {
+        width: 90% !important;
+        height: auto !important;
     }
 
-    
+  
+    .explore {
+        height: auto !important;
+        padding: 40px 0 !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
     .explore-content {
         width: 100% !important;
         padding: 20px !important;
         text-align: center !important;
     }
 
-   
-    .image-gallery img {
+    .explore-content h1 {
+        font-size: 8vmin !important;
+    }
+
+    
+    .content-col,
+    .image-col {
         width: 100% !important;
+        text-align: center !important;
+    }
+
+    .image-gallery img {
+        width: 90% !important;
         max-width: 350px !important;
     }
+
+   
+    .footer {
+        padding: 10px !important;
+        text-align: center !important;
+    }
 }
+
+      
 
 
     </style>
